@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+header{
+  background-image: url("../img/noise3.png");
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar {
+  font-weight: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer{
+  width: 100%;
+  height: 40px;
+}
+
+.copy{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(164, 164, 255);
+}
+
+
+.logo_imagen{
+  border-radius: 7px;
+  margin-top: 3px;
+  width: 100px;
+  height: 100px;
+}
+
+hr{
+  border-color: rgb(164, 164, 255);
+}
+
+body{
+  background-image: url("../img/noise3.png");
+} 
+
+.menu__item{
+  display: inline-block;
+  margin-inline: 20px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.menu__item a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.menu__item.active a, 
+.menu__item a:hover{
+  text-decoration: underline double;
+}
+
+.inicio{
+  width: 100%;
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_imagen{
+  float: left;
+  width: 20vw;
+  height: 40vh;
+}
+
+.contenedor_imagen img{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.contenedor_texto{
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+
+.contenedor_texto h2{
+  color: white;
+}
+
+.contenedor_texto h5{
+  color: rgb(164, 164, 255);
+}
+
+.contenedor_texto p{
+  color: white;
+  margin: 20px 0;
+}
+
+.contenedor_texto button{
+  margin: 10px;
+  color: white;
+  background-color: gray;
+  border-color: white;
+  height: 30px;
+  width:70px;
+  border: 0;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 750px){
+  .contenedor_texto p{
+    color: red;
+    margin: 20px 0;
+    font-size: 5px;
+  }
+}
+
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+
+.texto_sobre-mi{
+  color: white;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: rgba(125, 125, 255, 0.432);
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+}
+
+.sobremi {
+  width: calc(100%);
+  height: calc(89vh - 50px);
+}
+
+.contenedor {
+  width: calc(100%);
+  height: calc(100% - 50px);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.contenedor__global {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+}
+
+.contenedor__global img {
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+}
+
+
+
+
+
+/*BOTON*/
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  width: 300px;
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 80%;
+  padding: 10px 0;
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 10px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color:rgb(164, 164, 255);
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: rgb(164, 164, 255);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(164, 164, 255),
+              0 0 10px rgb(164, 164, 255),
+              0 0 15px rgb(164, 164, 255),
+              0 0 20px rgb(164, 164, 255),
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(164, 164, 255));
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgb(164, 164, 255));
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, white);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent,white);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
