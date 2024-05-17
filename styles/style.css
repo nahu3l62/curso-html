@@ -76,7 +76,7 @@ body{
 
 .inicio{
   width: 100%;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 170px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,15 +125,6 @@ body{
   width:70px;
   border: 0;
   border-radius: 10px;
-}
-
-
-@media (max-width: 750px){
-  .contenedor_texto p{
-    color: red;
-    margin: 20px 0;
-    font-size: 5px;
-  }
 }
 
 
@@ -215,10 +206,11 @@ body{
 
 .contenedor__global {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 220px);
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  margin-top: 50px;
   justify-content: center;
 }
 
@@ -392,4 +384,100 @@ body{
   50%,100% {
     bottom: 100%;
   }
+}
+
+
+.stack h3 {
+  color: rgb(164, 164, 255);
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .10em solid rgb(255, 255, 255); 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .3em; 
+  animation: 
+    typing 5.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  30% { border-color: white }
+}
+
+.portada{
+  margin:auto;
+  cursor: pointer;
+  transition: 4s;
+}
+
+.portada:hover{
+  transform: scale(1.15);
+  transition: 4s;
+}
+
+
+.logo_imagen:hover {
+  animation-name: wiggle;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: translate(0,0);
+  }
+  25%,
+  75% {
+    transform: translate(10px,0);
+  }
+  50% {
+    transform: translate(-10px,0);
+  }
+}
+
+.proyectos{
+  width: 100%;
+}
+
+.tarjetitas{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+.tarjetita{
+  border: white 3px solid;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  box-shadow: 1px 9px 20px -5px rgb(164, 164, 255, 0.5);
+}
+
+.informacion{
+  margin-top: 10px;
+  color: white;
+  padding-inline: 20px;
+  padding-bottom: 30px;
+}
+
+.tarjetita__imagen{
+  max-width: 100%;
 }
